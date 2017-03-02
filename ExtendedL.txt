@@ -1,0 +1,9 @@
+access-list 117 permit TCP 172.16.70.5 0.0.0.0 172.16.10.1 0.0.0.0 eq 23
+access-list 117 permit TCP 172.16.70.5 0.0.0.0 172.16.20.1 0.0.0.0 eq 23
+access-list 117 permit TCP 182.16.70.5 0.0.0.0 172.16.30.1 0.0.0.0 eq 23
+access-list 117 deny TCP any 172.16.10.1 0.0.0.0 eq 23
+access-list 117 deny TCP any 172.16.20.1 0.0.0.0 eq 23
+access-list 117 deny TCP any 172.16.30.1 0.0.0.0 eq 23
+access-list 117 permit IP any any
+interface S0#Edmonton
+IP access-group 117 in

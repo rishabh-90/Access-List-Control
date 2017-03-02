@@ -1,0 +1,7 @@
+access-list 18 permit 172.16.80.5 0.0.0.0
+access-list 18 deny 182.16.80.0 0.0.0.255
+access-list 18 deny 172.16.72.6 0.0.0.0
+access-list 18 permit 172.16.72.0 0.0.0.255
+access-list 18 permit any  
+interface E0#Edmonton
+IP access-group 18 out
